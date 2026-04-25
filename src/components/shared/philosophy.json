@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_philosophies",
+  "info": {
+    "displayName": "philosophy"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

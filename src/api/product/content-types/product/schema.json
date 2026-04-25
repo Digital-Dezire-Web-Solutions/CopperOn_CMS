@@ -1,0 +1,65 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "Product"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "part": {
+      "type": "uid"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "products"
+    },
+    "features": {
+      "type": "component",
+      "component": "shared.feature",
+      "repeatable": true
+    },
+    "applications": {
+      "type": "component",
+      "component": "shared.applications",
+      "repeatable": true
+    },
+    "specifications": {
+      "type": "component",
+      "component": "shared.specification",
+      "repeatable": true
+    },
+    "standards": {
+      "type": "component",
+      "component": "shared.standard",
+      "repeatable": true
+    },
+    "datasheet": {
+      "type": "component",
+      "component": "shared.data-sheet",
+      "repeatable": true
+    }
+  }
+}

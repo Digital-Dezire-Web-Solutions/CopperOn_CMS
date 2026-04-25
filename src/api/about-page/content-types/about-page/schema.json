@@ -1,0 +1,44 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_pages",
+  "info": {
+    "singularName": "about-page",
+    "pluralName": "about-pages",
+    "displayName": "About Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "aboutIntro": {
+      "type": "component",
+      "component": "shared.about-intro",
+      "repeatable": false
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "philosophy": {
+      "type": "component",
+      "component": "shared.philosophy",
+      "repeatable": true
+    },
+    "values": {
+      "type": "component",
+      "component": "shared.value",
+      "repeatable": true
+    },
+    "deploymentTitle": {
+      "type": "string"
+    },
+    "deploymentDescription": {
+      "type": "string"
+    },
+    "deployments": {
+      "type": "component",
+      "component": "shared.deployment-group",
+      "repeatable": true
+    }
+  }
+}

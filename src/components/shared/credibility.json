@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_shared_credibilities",
+  "info": {
+    "displayName": "credibility"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

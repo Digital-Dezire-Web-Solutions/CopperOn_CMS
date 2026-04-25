@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_shared_about_intros",
+  "info": {
+    "displayName": "about-intro"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "aboutFeatures": {
+      "type": "component",
+      "component": "shared.about-feature",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
