@@ -81,7 +81,7 @@ export interface SharedDataSheet extends Struct.ComponentSchema {
     displayName: 'DataSheet';
   };
   attributes: {
-    dataSheet: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    file: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
 
