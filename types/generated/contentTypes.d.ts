@@ -792,8 +792,8 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    datasheet: Schema.Attribute.Component<'shared.data-sheet', true>;
     description: Schema.Attribute.Blocks;
+    download: Schema.Attribute.Component<'shared.downloads', true>;
     features: Schema.Attribute.Component<'shared.feature', true>;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;

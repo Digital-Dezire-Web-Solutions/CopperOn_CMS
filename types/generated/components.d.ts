@@ -80,9 +80,7 @@ export interface SharedDataSheet extends Struct.ComponentSchema {
   info: {
     displayName: 'DataSheet';
   };
-  attributes: {
-    file: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-  };
+  attributes: {};
 }
 
 export interface SharedDeploymentGroup extends Struct.ComponentSchema {
@@ -92,6 +90,17 @@ export interface SharedDeploymentGroup extends Struct.ComponentSchema {
   };
   attributes: {
     items: Schema.Attribute.Component<'shared.items', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedDownloads extends Struct.ComponentSchema {
+  collectionName: 'components_shared_downloads';
+  info: {
+    displayName: 'Downloads';
+  };
+  attributes: {
+    file: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     title: Schema.Attribute.String;
   };
 }
@@ -255,6 +264,7 @@ declare module '@strapi/strapi' {
       'shared.credibility': SharedCredibility;
       'shared.data-sheet': SharedDataSheet;
       'shared.deployment-group': SharedDeploymentGroup;
+      'shared.downloads': SharedDownloads;
       'shared.feature': SharedFeature;
       'shared.footer-link': SharedFooterLink;
       'shared.items': SharedItems;

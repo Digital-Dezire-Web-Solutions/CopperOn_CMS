@@ -56,9 +56,9 @@
       "component": "shared.standard",
       "repeatable": true
     },
-    "datasheet": {
+    "download": {
       "type": "component",
-      "component": "shared.data-sheet",
+      "component": "shared.downloads",
       "repeatable": true
     }
   }

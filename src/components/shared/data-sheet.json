@@ -4,17 +4,6 @@
     "displayName": "DataSheet"
   },
   "options": {},
-  "attributes": {
-    "file": {
-      "type": "media",
-      "multiple": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    }
-  },
+  "attributes": {},
   "config": {}
 }
