@@ -841,6 +841,9 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
     location: Schema.Attribute.String;
     name: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
+    region: Schema.Attribute.Enumeration<
+      ['USA Projects', 'MEA Projects', 'Asia-Pacific Projects']
+    >;
     sector: Schema.Attribute.String;
     slug: Schema.Attribute.UID;
     updatedAt: Schema.Attribute.DateTime;

@@ -17,6 +17,14 @@
     "slug": {
       "type": "uid"
     },
+    "region": {
+      "type": "enumeration",
+      "enum": [
+        "USA Projects",
+        "MEA Projects",
+        "Asia-Pacific Projects"
+      ]
+    },
     "location": {
       "type": "string"
     },
