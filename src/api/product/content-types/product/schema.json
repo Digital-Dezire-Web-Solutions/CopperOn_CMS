@@ -11,15 +11,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "name": {
-      "type": "string"
-    },
-    "part": {
-      "type": "uid"
-    },
-    "description": {
-      "type": "blocks"
-    },
     "image": {
       "type": "media",
       "multiple": false,
@@ -30,36 +21,42 @@
         "audios"
       ]
     },
+    "product_name": {
+      "type": "string"
+    },
+    "part_number": {
+      "type": "uid"
+    },
     "category": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::category.category",
       "inversedBy": "products"
     },
-    "features": {
-      "type": "component",
-      "component": "shared.feature",
-      "repeatable": true
-    },
-    "applications": {
-      "type": "component",
-      "component": "shared.applications",
-      "repeatable": true
-    },
-    "specifications": {
+    "key_specifications": {
       "type": "component",
       "component": "shared.specification",
       "repeatable": true
     },
-    "standards": {
-      "type": "component",
-      "component": "shared.standard",
-      "repeatable": true
+    "technical_description": {
+      "type": "blocks"
     },
-    "download": {
+    "datasheet": {
       "type": "component",
       "component": "shared.downloads",
       "repeatable": true
+    },
+    "related_products": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product.product",
+      "mappedBy": "related_to"
+    },
+    "related_to": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product.product",
+      "inversedBy": "related_products"
     }
   }
 }

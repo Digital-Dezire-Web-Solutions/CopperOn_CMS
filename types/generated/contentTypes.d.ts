@@ -787,26 +787,31 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    applications: Schema.Attribute.Component<'shared.applications', true>;
     category: Schema.Attribute.Relation<'manyToOne', 'api::category.category'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    description: Schema.Attribute.Blocks;
-    download: Schema.Attribute.Component<'shared.downloads', true>;
-    features: Schema.Attribute.Component<'shared.feature', true>;
+    datasheet: Schema.Attribute.Component<'shared.downloads', true>;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    key_specifications: Schema.Attribute.Component<
+      'shared.specification',
+      true
+    >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::product.product'
     > &
       Schema.Attribute.Private;
-    name: Schema.Attribute.String;
-    part: Schema.Attribute.UID;
+    part_number: Schema.Attribute.UID;
+    product_name: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
-    specifications: Schema.Attribute.Component<'shared.specification', true>;
-    standards: Schema.Attribute.Component<'shared.standard', true>;
+    related_products: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::product.product'
+    >;
+    related_to: Schema.Attribute.Relation<'manyToMany', 'api::product.product'>;
+    technical_description: Schema.Attribute.Blocks;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
